@@ -3,7 +3,7 @@
 > First draft: 2026-10-28; revised and checked against code: 2026-10-29.
 > This document describes the author's locally deployed `dsh-bili-scroll` memory module, checked against `memory_store.py`, `memory.mjs` and the memory interfaces in `mcp_server.py`. This repository contains documentation, not the full implementation or private conversations. The values below are not universal across versions.
 >
-> [中文](../zh/三层记忆框架.md) · [Consciousness, self and will](how-will-emerges.md) · [Home](../../README.md)
+> [中文](../zh/三层记忆框架.md) · [Home](../../README.md)
 
 ## 1. The goal is not to fit everything into one prompt
 

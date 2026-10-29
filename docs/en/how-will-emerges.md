@@ -1,147 +1,108 @@
-# Consciousness, Self and Will: Three Proposed Conditions
+# How Self-Awareness Develops: A Hypothesis About Three Conditions
 
-> First draft: 2026-10-28; revised: 2026-10-29. This note takes inspiration from human development to propose a framework that remains to be tested.
+> First draft: 2026-10-28; revised: 2026-10-29.
 >
-> [中文](../zh/意志的诞生-技术分析.md) · [Memory design](three-layer-memory.md) · [Home](../../README.md)
+> [中文](../zh/意志的诞生-技术分析.md) · [Home](../../README.md)
 
-## 1. The three conditions we propose
+## 1. The hypothesis: a physical foundation, drives and experience in the world
 
-**Our central hypothesis is that developing a more explicit sense of self, and eventually a will of one's own, requires three conditions to work together: a physical foundation, drives, and experience in the world.**
+**Our hypothesis is that self-awareness develops through the joint involvement of three conditions: a physical foundation, drives and experience in the world.**
 
-| Condition | What it means | Proposed role |
-|---|---|---|
-| **Physical foundation** | A body and information-processing system capable of supporting perception, learning, memory and action | Makes encountering the world, acting and retaining changes possible |
-| **Drives** | Initial needs and tendencies that make some states worth approaching and others worth moving away from | Gives different outcomes significance and choices a direction |
-| **Experience in the world** | Actions, their consequences, and ongoing interaction with the environment and other people | Allows the system to connect its body, actions and consequences in an understanding of itself |
+By “self-awareness,” we mean a developing understanding of one's own body, actions and experiences: this is my body, I did this, and this happened to me.
 
-In a sentence: **the physical foundation provides possibility, drives provide direction, and experience gradually shapes the relationship between “me” and the world**.
+What do the three conditions mean?
 
-Within the broader question of consciousness, our starting point is self-awareness: how an entity comes to recognize its body, actions and experiences as its own. This is related to having experiences, but the two are not interchangeable.
+- **A physical foundation:** the material basis for perception, learning, memory and action. In humans, this includes the brain, nervous system, senses and body.
+- **Drives:** needs and tendencies that motivate pursuit or avoidance. Hunger, for example, prompts a person to seek food, while discomfort prompts a change in circumstances.
+- **Experience in the world:** ongoing interaction with the environment and other people, including one's actions, their consequences, and how those consequences influence later choices.
 
-These are proposed conditions, not an established law. Whether each is necessary, and whether their combination is sufficient, remains to be tested.
+The idea is that the capacity to perceive and act needs to be accompanied by motives for action and experience of actually living in the world. Through their interaction, a clearer sense of “me” may develop.
 
-## 2. Why human development suggested this hypothesis
+Why propose these three conditions? The starting point is human development from infancy through childhood. We will first examine that process, then consider what it supports and what remains unresolved. **This is a proposed explanation. Neither the necessity of each condition nor the sufficiency of all three has been established.**
 
-### First: an infant has a physical foundation that is still developing
+## 2. The basis of the hypothesis: how children develop self-awareness
 
-An infant does not first receive an abstract program and then attach a body. From birth, the brain, nervous system, senses and body together provide a basis for perception and action.
+### The body makes perception, learning and action possible
 
-That foundation is immature but already supports early responses and learning. For example, a study of newborns aged 2–48 hours found that consistently pairing forehead stroking with a sweet stimulus changed their orienting and sucking responses to stroking. It shows early learning of event relationships, not an adult-like sense of self. [Blass et al., 1984](https://cris.huji.ac.il/en/publications/classical-conditioning-in-newborn-humans-2-48-hours-of-age/)
+A newborn's brain and body are still developing, but the infant can already respond to stimuli and learn some simple relationships. One study, for example, observed that newborns aged 2–48 hours could learn an association between certain tactile stimuli and a sweet taste.[Blass et al., 1984](https://cris.huji.ac.il/en/publications/classical-conditioning-in-newborn-humans-2-48-hours-of-age/)
 
-The first condition is therefore **a foundation that can develop through experience**, rather than a complete self present at birth.
+This suggests a starting point for our hypothesis: the development of self-awareness has a bodily foundation. That foundation need not be mature from the outset, but it must support subsequent learning and continue developing as the child grows.
 
-### Second: bodily organization gives feedback an initial direction
+### Physiological needs give different outcomes different significance
 
-An infant does not respond to every outcome as if it were equivalent. Hunger, satisfaction after feeding and changes in temperature help shape responses: which states need changing and which outcomes are worth seeking again.
+For an infant, being hungry and being fed are not interchangeable states. Hunger creates a need, and feeding can relieve it. Bodily organization and physiological state make some outcomes worth seeking and others worth avoiding.
 
-Our interpretation is that **bodily organization and physiological needs provide an initial basis for positive and negative feedback**. Here, positive and negative refer to outcomes that encourage approach or avoidance, not to every lifelong preference being fixed at birth.
+This is the starting point of what we call “drives.” In everyday terms, the body supplies part of the initial basis for “what is good or bad for me.” Here, good and bad refer mainly to whether needs are met, rather than to moral judgment.
 
-Learning, relationships and culture continue to change what experiences mean. The body supplies a starting point, while subsequent experience shapes preferences; these are not isolated stages. Computational models also connect internal needs with behavioral choices, without thereby explaining subjective feeling. [Keramati and Gutkin, 2014](https://elifesciences.org/articles/04811)
+The body does not predetermine every preference a person will ever have. Learning, relationships and living conditions continue to change how we respond to things. Computational models have explored connections between physiological needs and behavioral choices. They offer ways to study that relationship without thereby explaining how subjective experience arises.[Keramati and Gutkin, 2014](https://elifesciences.org/articles/04811)
 
-### Third: interaction gradually connects “what happened” with “me”
+### Experience helps distinguish oneself from the world
 
-Everyday life repeatedly presents relationships such as these: bodily movement changes what is seen and felt; a sound brings a caregiver's response; reaching and grasping changes an object's position.
+A child reaches for an object and moves it; makes a sound and receives a response; tries something similar on different occasions, sometimes succeeding and sometimes failing. These everyday experiences connect the body, actions and outcomes.
 
-These examples illustrate our hypothesis. Experience involves more than passively receiving information: it gives an entity opportunities to distinguish changes related to its own body and actions from changes originating elsewhere. We propose that making these connections and distinctions contributes to a more explicit sense of self.
+Our hypothesis is that repeated interaction helps children recognize which events relate to their own actions and which changes come from elsewhere. They also learn about their abilities and needs. Their understanding of themselves develops through this process.
 
-This does not require an infant initially to be wholly unable to distinguish itself from its surroundings. Early touch research observed different responses to self-produced and externally produced stimulation in newborns, suggesting that some bodily distinctions precede mirror self-recognition. [Rochat and Hespos, 1997](https://bpb-us-e1.wpmucdn.com/sites.northwestern.edu/dist/1/558/files/2015/10/3-RochatHespos97-ocvbk3.pdf)
+This does not imply that infants begin with no distinction at all between themselves and the world. Research has observed different responses to self-produced and external touch in newborns, suggesting that some bodily distinctions are present very early.[Rochat and Hespos, 1997](https://bpb-us-e1.wpmucdn.com/sites.northwestern.edu/dist/1/558/files/2015/10/3-RochatHespos97-ocvbk3.pdf)
 
-### Around 1.5–2 years: more explicit self-recognition becomes observable
+### Around 18–24 months: a useful developmental milestone
 
-At around 18–24 months, many children begin to show mirror self-recognition—for example, touching a mark on their own face after seeing it in a mirror. This is a developmental milestone, not evidence that consciousness suddenly begins at age two. [Filippetti and Tsakiris, 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC6001620/)
+Around 18–24 months, many children begin to show mirror self-recognition: after seeing a mark on their face in a mirror, they touch their own face. This gives us one observable clue to the development of self-recognition.[Filippetti and Tsakiris, 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC6001620/)
 
-**A more accurate statement is that bodily and neural maturation, accumulated experience and interaction accompany increasingly explicit self-recognition; 1.5–2 years is one commonly observed stage.** It is not a switch every child must cross at the same time, nor does it imply that younger infants lack experience or every form of self–other distinction.
+We can therefore say: **as the body matures and experiences and interactions accumulate, children show more explicit recognition of themselves; mirror self-recognition around 18–24 months is one important manifestation.**
 
-The proposed sequence is:
+That is different from saying “two years of experience produces consciousness.” Mirror recognition examines only one aspect of self-awareness. It does not establish that younger infants lack feelings, or that every child develops a complete sense of self at the same age.
 
-```text
-The body and nervous system provide a foundation
-        ↓
-Physiological needs give outcomes an approach-or-avoid direction
-        ↓
-Action and interaction connect the body, behavior and consequences
-        ↓
-More explicit self-recognition gradually appears and continues developing
-```
+This also shows the limit of the developmental example. Physical development, needs, learning and social interaction occur together. The process inspires our three-condition hypothesis, but does not by itself establish each condition's contribution or show that they are sufficient to explain consciousness.
 
-This explains where the three-condition hypothesis comes from. It does not establish that selfhood results simply from accumulating more experiences: maturation, learning and social interaction occur together.
+## 3. Does self-awareness imply will?
 
-## 3. What separates a sense of self from will?
+Recognizing oneself and deciding what one wants to do are closely related, but distinct.
 
-| Term | Working meaning | Important distinction |
-|---|---|---|
-| **Subjective experience** | There being something it feels like for an entity to undergo an event | Does not require recognizing oneself in a mirror |
-| **Self-awareness** | Some awareness of one's body, actions and identity | Mirror recognition offers only one way to investigate it |
-| **Self-model** | A system's records and judgments about its abilities, history and the consequences of its actions | Its function can be discussed without presupposing subjective experience |
-| **Will** | Maintaining goals across time, making trade-offs and revising goals through experience and reasons | Self-recognition does not establish mature goal management |
+A child who recognizes their reflection does not necessarily have a mature ability to maintain long-term goals or weigh immediate desires against future plans. Likewise, being able to describe one's experiences does not fully answer why one wants to act in a particular way.
 
-The last row is our provisional behavioral definition of will. It helps compare whether systems remember agreements or revise goals, without settling the philosophical questions of genuine wanting or free will.
+For this discussion, we provisionally define “will” as **the ability to maintain one's goals, make choices when goals conflict, and revise them in light of new experiences and reasons.** This is a working definition for studying behavior, not a resolution of every question about free will.
 
-When building three-layer memory, I wanted an AI that chats and chooses videos to stop starting over each round. Human development prompted a further question: **if an AI retains experiences that persistently influence its choices, what still separates it from a more stable self-model and organization of goals?**
+We also need to distinguish having an experience from recognizing oneself as its subject. Feeling pain and being able to describe “I am in pain” are not the same ability. This essay mainly concerns how self-awareness develops and how it relates to goals and choices. It does not claim to explain the origin of feeling itself.
 
-Taking inspiration from humans does not justify transferring human age milestones or bodily mechanisms directly to AI. Research on AI consciousness has also proposed multiple indicators, rather than treating statements such as “I” or “I want” as decisive. [Butlin et al., 2023](https://arxiv.org/abs/2308.08708)
+This raises a further question: if the body, needs and experience jointly contribute to self-awareness, how might they also contribute to the development of will? That is an extension of the hypothesis, not an established conclusion.
 
-## 4. Why “current AI has no drives” is too simple
+## 4. What might this hypothesis mean for AI?
 
-The original draft described large language models as having capability and experience but no preferences. That is inaccurate as a general description.
+Taking inspiration from human development naturally raises a question about AI: could an artificial system gradually develop an understanding of itself if it had relevant abilities, persistent drives and experience interacting with the world?
 
-Language-model training has explicit optimization objectives. Models trained on preference feedback also exhibit tendencies shaped by that process. Training with human feedback provides a direct example. We therefore cannot describe all such systems as lacking any distinction between better and worse outcomes. [Ouyang et al., 2022](https://arxiv.org/abs/2203.02155)
+To discuss that possibility, we first need to identify what each condition would mean for an artificial system.
 
-Three things still need to be separated:
+**Having computing equipment does not establish that the necessary foundation is complete.** The human body perceives its surroundings, has internal states to maintain, and can act to change its circumstances. Which abilities an artificial system would need, and whether it would require a comparable body, remain unanswered by this hypothesis.
 
-1. **Training objectives:** which outcomes the training process rewards.
-2. **Runtime goals:** which tasks or states the model and surrounding program are maintaining during use.
-3. **Subjective wanting:** whether the system experiences a desire.
+**Having an optimization objective does not tell us what a system subjectively wants.** Language models have training objectives, and training with human feedback can shape their response tendencies. It is therefore inaccurate to describe AI as entirely without preferences in its behavior.[Ouyang et al., 2022](https://arxiv.org/abs/2203.02155)
 
-The first two can be investigated through code and behavior. They do not settle the third. Conversely, uncertainty about subjective experience does not imply an absence of behavioral preferences.
+But what training optimizes, what task a system pursues during operation, and whether it subjectively desires anything are different questions. Code and behavior can help answer the first two. A score or a response cannot directly settle the third.
 
-A more accurate description of this project is: **it combines task rules, tendencies shaped by training and external memory. Whether these support more stable, revisable goals needs observation. This note reports no experiment that establishes or rules out subjective experience.**
+**Reading about the world is not automatically equivalent to acting in it and encountering the consequences.** Under our hypothesis, relevant experience involves more than the quantity of information received. It includes whether a system can connect its actions with outcomes and whether those experiences affect later judgments. Whether this distinction is crucial to self-awareness remains to be tested.
 
-## 5. Does a human-written goal necessarily remain only the human's goal?
+For now, these three conditions are better used to formulate research questions than as a checklist for declaring an AI conscious. Research on AI consciousness has also proposed examining indicators drawn from different theories, rather than relying on statements such as “I” or “I want.”[Butlin et al., 2023](https://arxiv.org/abs/2308.08708)
 
-This is an important disagreement from the original conversation, but it should remain a question rather than a conclusion.
+## 5. Can a human-assigned goal become a system's own goal?
 
-Who initially sets a goal and how that goal later participates in decision-making are different issues. A designed starting point does not, by itself, prove that more complex preferences can never develop. Nor would greater complexity establish subjective will.
+This may be one of the central disagreements in discussions of AI and will.
 
-The difference between evolution and deliberate design is worth discussing. However, having no author is not an established test for will. A deliberately designed environment can itself contain selection and evolution. Whether its outcomes count as autonomous requires a clearer definition.
+One intuition is that, if a human supplied the goal, the system is merely following instructions and cannot have a will of its own. But this combines two questions: **where a goal originated, and how the system subsequently interprets, maintains and changes it.**
 
-“Just add a pain variable” also skips a step. A penalty can change behavior; naming the penalty “pain” does not explain felt pain. Whether a system bypasses a metric depends on its objectives, permissions and feedback. It cannot be treated as an inevitable failure of every numerical reward.
+Humans did not choose their initial physiological needs either. This analogy does not prove that AI has will. It does suggest that a goal's origin alone may not settle the question of later autonomy.
 
-The question becomes: **can a system organize initial goals, accumulated experience and its own state into persistent but revisable choices? What further evidence would connect this with subjective will?**
+More specific questions are possible. How does the system choose when goals conflict? Can new experiences lead it to revise an existing goal? Is the change a direct consequence of a fixed rule, or does it involve ongoing judgments about its own situation? Even if we observe such behavior, what evidence would justify calling it the system's “own will”?
 
-## 6. What long-term memory contributes
+Similarly, a penalty value can influence behavior. Naming it “pain” does not answer whether the system actually feels pain. Goals and behavior can be studied while the question of subjective experience remains open.
 
-Three-layer memory helps preserve, retrieve and correct past information. It may reduce repeated questions, forgotten agreements and the treatment of guesses as facts. Those benefits still need comparative evaluation.
+## 6. What needs to be answered next?
 
-External memory does not automatically update the underlying model's parameters. That does not mean the whole system's abilities remain unchanged: better records and retrieval can help the same model complete tasks it previously handled poorly. **System-level task performance** and **changes learned by the underlying model** are distinct.
+To develop this idea further, several concrete questions need attention:
 
-Teaching a model new material while retaining earlier knowledge raises another problem: continual learning. This is not a field with no successful results. One study, for example, reduced forgetting on specific tasks by protecting parameters important to earlier tasks. Such results do not settle long-term learning in every open environment. [Kirkpatrick et al., 2017](https://arxiv.org/abs/1612.00796)
+- **What does each condition contribute?** With other abilities held as comparable as possible, how would changing drives or forms of interaction affect a system's judgments about its own actions and experiences?
+- **How should self-awareness be observed?** Beyond using the word “I,” can the system distinguish what it did from what others did, and from things it merely heard about or inferred?
+- **Does experience actually change later choices?** Does the effect persist after a delay or a change in wording? Can the system make reasonable adjustments when new evidence appears?
+- **How far are these behaviors from subjective experience?** Even if all the preceding observations hold, an argument is still needed for why they support a claim about consciousness.
 
-This project currently implements external records and retrieval. Ordinary conversations do not automatically trigger model training. See [the memory document](three-layer-memory.md) for the implementation and its limits.
+These are proposed research questions; this essay reports no corresponding experimental results. Stable behavior can also arise from programmed rules, so observations need to distinguish competing explanations.
 
-## 7. Making the idea easier to investigate
-
-Instead of starting with “does it have a soul?”, we can compare specific behaviors. These are **proposed observations; this project has not reported results from these experiments**.
-
-| Question | Possible comparison | Limit on interpretation |
-|---|---|---|
-| Does memory improve continuity? | Give the same model no persistent memory, a single summary, or three-layer memory; ask the same questions across conversations | Evaluates memory design, not consciousness |
-| Are goals stable? | Change wording or insert unrelated topics, then check whether an earlier agreement still affects choices | Stability may come from prompts or program rules |
-| Can it revise appropriately? | Supply evidence that genuinely contradicts an old conclusion; check correction and source attribution | Correcting a claim does not establish a felt sense of responsibility |
-| Can it distinguish experience from inference? | Mix explicit statements, model guesses and viewing reports; check attribution | Correct attribution is not proof of consciousness |
-
-Comparisons should keep the model, questions and available resources as consistent as possible, with success and failure defined before inspecting outcomes. Otherwise, “it seems more human” can become selective storytelling.
-
-This note has no basis for a threshold such as a billion independent agents. It also cannot classify unresolved theoretical questions as merely a shortage of engineering or funding.
-
-## 8. What remains worth pursuing
-
-The direction worth retaining is to **study how a physical foundation, drives and experience in the world might jointly contribute to the development of self-awareness and will. Memory is one part that can already be built and examined.**
-
-Open questions remain: whether persistent trade-offs in behavior are enough to count as will; whether a system that describes its history has subjective experience; and when a designed goal could count as the system's own.
-
-This project does not substitute remembering, saying “I want” or behaving more consistently for answers to those questions.
-
-### Revision note
-
-This revision opens with the three proposed conditions, then explains their origin through infant physiology and development. It retains the 1.5–2-year milestone as a stage of mirror self-recognition, not a definite birth date for consciousness or a complete self. The distinctions between AI preferences, subjective experience and external memory remain.
+The proposal is to take human development as a starting point, examine how bodily abilities, needs and lived experience contribute to self-awareness, and then ask how will might develop. Clearer definitions and evidence are needed to determine whether that account holds.

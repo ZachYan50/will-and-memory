@@ -1,53 +1,50 @@
 # 意志与记忆 · Will & Memory
 
-这个项目从一个实际问题出发：**一个能聊天、能看视频的 AI，怎样才能记住共同经历，而不是每次都从头认识你？**
+这里收录两篇独立的文章：一篇讨论自我意识与意志如何形成，另一篇介绍用于 AI 对话的三层记忆设计。**两篇没有前后篇关系，可以按兴趣分别阅读；记忆系统的实现，也不是意识推测的验证。**
 
-修补记忆的过程中，又出现了一个更难的问题：如果它能长期记住、形成偏好，并根据经历改变选择，这离我们所说的“意志”还有多远？
+## 文章目录
 
-这里记录两件相关但不同的工作：一套已经用于私人 B 站插件的记忆设计，以及一份关于意志的讨论。**前者可以检查实现和效果；后者仍是待检验的想法。记忆系统的运行，不等于意志或意识已经诞生。**
-
-## 从哪里读起
-
-| 你关心的问题 | 中文 | English |
+| 文章 | 内容 | English |
 |---|---|---|
-| 这套记忆到底怎么工作？ | [三层记忆：设计、实现与边界](docs/zh/三层记忆框架.md) | [Three-Layer Memory](docs/en/three-layer-memory.md) |
-| 为什么从硬件、驱力和经历推测自我的形成？ | [意识、自我与意志：三个条件的推测](docs/zh/意志的诞生-技术分析.md) | [Consciousness, Self and Will](docs/en/how-will-emerges.md) |
+| [自我意识如何形成：关于三个条件的推测](docs/zh/意志的诞生-技术分析.md) | 从硬件基础、驱力和经历出发，以人类成长解释推测的依据，再讨论对 AI 的启发与尚未解决的问题 | [How Self-Awareness Develops](docs/en/how-will-emerges.md) |
+| [三层记忆：设计、实现与边界](docs/zh/三层记忆框架.md) | 介绍私人 B 站插件中的记忆设计，包括信息如何保存、检索、更新，以及目前的限制 | [Three-Layer Memory](docs/en/three-layer-memory.md) |
 
-建议先读记忆，再读意志。两篇都先讲问题和例子，再讲依据与限制，不需要先掌握机器学习术语。
+## 自我意识与意志
 
-## 三层记忆，先用日常语言解释
+这篇文章提出一个推测：**自我意识的形成，需要硬件基础、驱力和在世界中的经历共同参与。**
+
+推测的依据来自人类成长：婴儿具有感知与学习的身体基础，生理需求促使其寻求满足、回避不适；随着身体发育和互动经历的积累，儿童逐渐表现出更明确的自我认识。
+
+约1.5–2岁的镜像自我识别是其中一条观察线索，并不意味着所有意识都在这个年龄才出现。文章随后讨论自我意识与意志的区别，以及这一思路对 AI 提出了什么问题。三个条件的作用尚待检验，文章没有声称已经找到意识诞生的充分条件。
+
+## 三层记忆设计
+
+这篇文章回答一个实际问题：**怎样让 AI 在长期对话中记住重要的事，同时能够回查细节？**
 
 - **第一层：随时记着的核心信息。** 例如对方明确说过的长期偏好。
-- **第二层：值得回想的事实和经历。** 不只记一句结论，也可以保留为什么发生、双方怎么想、后来哪里变了。
-- **第三层：可回查的原始记录。** 摘要不够时，再去找当时实际保存的消息或观看报告。
+- **第二层：值得回想的事实和经历。** 除了结论，也可以保留发生的原因、当时的想法和后来的变化。
+- **第三层：可回查的原始记录。** 摘要不够时，寻找实际保存的消息或观看报告。
 
-每次对话只取相关的一小部分。旧事被再次提起，可以补充已有记忆；仅仅被系统搜索到，不会因此自动变得更重要。
+每轮对话只取相关的一部分内容。旧事被再次提起，可以补充已有记忆；仅仅被系统搜索到，不会因此自动变得更重要。
 
-这里的目标是**让长期保存的信息不必全部塞进一次对话**。它不承诺无限磁盘、永不漏检，也不声称复现了人脑。
+这套设计已经用于作者的私人插件。文档说明当前实现及其限制，不承诺无限存储、永不漏检或复现人脑记忆。
 
-## 关于意识与自我，先提出三个推测条件
+## 作者、资料与版本
 
-我们的推测是：较明确的“自我”逐渐形成，需要**硬件基础、驱力、在世界中的经历**共同参与。文章先说明这三个条件，再从人类发育解释推测的来历：婴儿具备身体与神经系统基础，生理需求为反馈提供初始方向，成长与互动逐步带来更明确的自我识别。
+这些文章由一名高中生发起，在与 AI 的讨论中逐步整理。DeepSeek 参与原始讨论和记忆系统实现；Codex 协助代码核对与文档修订。AI 参与写作不代替事实核查。
 
-约1.5–2岁的镜像自我识别是其中一条发育线索，不是意识在那时突然出现的证明。三者的必要性与充分性尚未确立；AI 的训练目标、行为偏好和主观体验也仍需区分。
+文档初稿：**2026-10-28**；本次修订：**2026-10-29**。中文和英文内容同步，旧版保留在 Git 提交历史中。
 
-## 资料与版本
-
-项目由一名高中生发起，在与 AI 的对话和实现过程中逐步形成。DeepSeek 参与原始讨论与实现；Codex 协助代码核对和本次文档修订。AI 参与写作不代替事实核查。
-
-文档初稿：**2026-10-28**；本次修订：**2026-10-29**。两种语言同步调整了结构、论证范围和引用。原稿仍保留在 Git 提交历史中。
-
-本仓库发布的是说明文档，不包含完整插件源码、私人对话或可复现的完整实验材料。实现细节以文档标明日期的本地版本为范围；引用论文也不意味着本项目已经复现其结果。**本文档未经过同行评审。**
+本仓库只发布说明文档，不包含完整插件源码、私人对话或完整实验材料。记忆文章中的实现细节以注明日期的本地版本为准；引用论文不表示已经复现其结果。两篇文章均未经过同行评审。
 
 ## English
 
-This project began with a practical question: **how can an AI that chats and watches videos remember shared experiences instead of starting over each time?**
+This repository contains two independent essays. Neither is a prerequisite or a sequel to the other, and the memory implementation is not a test of the consciousness hypothesis.
 
-It led to a second question: if a system remembers, develops preferences and changes its choices through experience, how close is that to what we call “will”?
+- [How Self-Awareness Develops](docs/en/how-will-emerges.md) proposes three conditions: a physical foundation, drives and experience in the world. It explains the reasoning through human development before considering AI and unresolved questions. Mirror self-recognition around 18–24 months is a developmental milestone, not an established onset of all consciousness.
+- [Three-Layer Memory](docs/en/three-layer-memory.md) describes a memory design used in a private Bilibili plugin: a small core portrait, retrievable facts and episodes, and archived records. It explains storage, retrieval, updates and practical limits.
 
-The repository separates a working memory design from a hypothesis about self-awareness and will: a physical foundation, drives and experience in the world working together. The discussion now begins with those three conditions and uses infant development to explain the hypothesis. Mirror self-recognition around 18–24 months is a milestone, not an established onset of consciousness. Read [the memory design](docs/en/three-layer-memory.md) for the concrete system, then [the discussion of will](docs/en/how-will-emerges.md) for the broader question. A functioning memory system is not evidence that consciousness has emerged.
-
-The three layers are a small core portrait, retrievable facts and episodes, and archived records. Storage, retrieval and interpretation still have limits. This repository contains documentation, not the full plugin or private conversations. The notes were revised in both languages on **2026-10-29** and have not been peer-reviewed.
+The essays were initiated by a high-school student through discussions with AI. DeepSeek contributed to the original discussions and memory implementation; Codex assisted with code checks and document editing. Both languages were revised on **2026-10-29**. This repository contains documentation, not the full plugin, private conversations or complete experimental materials. Neither essay has been peer-reviewed.
 
 ## License
 
