@@ -11,7 +11,7 @@
 | 你关心的问题 | 中文 | English |
 |---|---|---|
 | 这套记忆到底怎么工作？ | [三层记忆：设计、实现与边界](docs/zh/三层记忆框架.md) | [Three-Layer Memory](docs/en/three-layer-memory.md) |
-| 为什么把能力、驱力和经历放在一起讨论？ | [意志可能如何形成：一个待检验的框架](docs/zh/意志的诞生-技术分析.md) | [How Might Will Emerge?](docs/en/how-will-emerges.md) |
+| 为什么从硬件、驱力和经历推测自我的形成？ | [意识、自我与意志：三个条件的推测](docs/zh/意志的诞生-技术分析.md) | [Consciousness, Self and Will](docs/en/how-will-emerges.md) |
 
 建议先读记忆，再读意志。两篇都先讲问题和例子，再讲依据与限制，不需要先掌握机器学习术语。
 
@@ -25,11 +25,11 @@
 
 这里的目标是**让长期保存的信息不必全部塞进一次对话**。它不承诺无限磁盘、永不漏检，也不声称复现了人脑。
 
-## 关于意志，保留问题，不抢先宣布答案
+## 关于意识与自我，先提出三个推测条件
 
-这份讨论尝试把三个因素放在一起：**能够感知和行动的系统、使某些结果更值得追求的驱力、能够持续影响后续选择的经历**。
+我们的推测是：较明确的“自我”逐渐形成，需要**硬件基础、驱力、在世界中的经历**共同参与。文章先说明这三个条件，再从人类发育解释推测的来历：婴儿具备身体与神经系统基础，生理需求为反馈提供初始方向，成长与互动逐步带来更明确的自我识别。
 
-它们可能帮助我们理解长期、有方向的行为，但目前没有证据证明：这三者就是意志的必要条件，或者凑齐三者就会产生主观体验。AI 的训练目标、行为偏好和“自己真的想要”，也不能当成同一件事。
+约1.5–2岁的镜像自我识别是其中一条发育线索，不是意识在那时突然出现的证明。三者的必要性与充分性尚未确立；AI 的训练目标、行为偏好和主观体验也仍需区分。
 
 ## 资料与版本
 
@@ -45,7 +45,7 @@ This project began with a practical question: **how can an AI that chats and wat
 
 It led to a second question: if a system remembers, develops preferences and changes its choices through experience, how close is that to what we call “will”?
 
-The repository separates a working memory design from a speculative account of will. Read [the memory design](docs/en/three-layer-memory.md) for the concrete system, then [the discussion of will](docs/en/how-will-emerges.md) for the broader question. A functioning memory system is not evidence that consciousness has emerged.
+The repository separates a working memory design from a hypothesis about self-awareness and will: a physical foundation, drives and experience in the world working together. The discussion now begins with those three conditions and uses infant development to explain the hypothesis. Mirror self-recognition around 18–24 months is a milestone, not an established onset of consciousness. Read [the memory design](docs/en/three-layer-memory.md) for the concrete system, then [the discussion of will](docs/en/how-will-emerges.md) for the broader question. A functioning memory system is not evidence that consciousness has emerged.
 
 The three layers are a small core portrait, retrievable facts and episodes, and archived records. Storage, retrieval and interpretation still have limits. This repository contains documentation, not the full plugin or private conversations. The notes were revised in both languages on **2026-10-29** and have not been peer-reviewed.
 
