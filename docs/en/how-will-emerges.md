@@ -18,7 +18,10 @@ The relationship can be understood this way: the body enables contact with the w
 
 ## 2. The basis of the hypothesis: how children develop self-awareness
 
-### At birth, the brain and body are immature but already support sensation and simple learning
+We begin with a premise: in our view, self-awareness does not emerge at birth. A newborn infant does not yet have self-awareness; drives arising from its bodily organization enable it to respond to external stimuli, but those responses do not mean that self-awareness has already appeared.
+In our view, self-awareness develops through an infant's experience of the world, through sensing and learning, rather than at the instant it first senses the world.
+
+### At birth, the brain and body are immature but have the capacity to sense and learn
 
 A newborn's brain and body are far from fully developed. Even so, the infant can sense some external stimuli, respond to them and learn simple relationships. Research has found that newborns aged 2–48 hours can learn an association between gentle forehead stroking and a sweet taste delivered immediately afterward.[1](https://cris.huji.ac.il/en/publications/classical-conditioning-in-newborn-humans-2-48-hours-of-age/)
 
