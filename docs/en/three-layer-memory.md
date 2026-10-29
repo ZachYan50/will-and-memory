@@ -1,9 +1,9 @@
 # Three-Layer Memory: Design, Implementation and Limits
 
-> First draft: 2026-10-28; revised and checked against code: 2026-10-29.
+> First draft: 2026-10-28; revised and checked against code: 2026-10-30. This is the English version; the original Chinese text is available at [中文原文](../zh/三层记忆框架.md).
 > This document describes the author's locally deployed `dsh-bili-scroll` memory module, checked against `memory_store.py`, `memory.mjs` and the memory interfaces in `mcp_server.py`. This repository contains documentation, not the full implementation or private conversations. The values below are not universal across versions.
 >
-> [中文](../zh/三层记忆框架.md) · [Home](../../README.md)
+> [Home](../../README.md)
 
 ## 1. The goal is not to fit everything into one prompt
 
@@ -25,7 +25,7 @@ If the system only remembers “this person likes being alone,” it has turned 
 
 | Layer | What it might preserve | When it is used |
 |---|---|---|
-| **L1: core portrait** | A few stable, explicit details; one silent moment is not enough to infer a lasting personality trait | Normally supplied directly during DM rounds |
+| **L1: core profile** | A few stable, explicit details; one instance of silence is not enough to infer a lasting personality trait | Normally supplied directly during DM rounds |
 | **L2: facts and episodes** | The stated preference for rainy-night walks, plus the conversation's context, quotations and later correction | Relevant summaries first, details when needed |
 | **L3: archived records** | The messages actually archived from both conversations | When a summary is insufficient, missing or disputed |
 
@@ -35,13 +35,13 @@ The point is to **keep original statements separate from interpretations, and le
 
 ### L1: a small amount of readily available information
 
-L1 holds a core portrait, such as explicitly stated long-term preferences. It is read for each DM round without a search.
+L1 holds a core profile, such as explicitly stated long-term preferences. It is read for each DM round without a search.
 
-The current write and injection limits are both **5210 UTF-8 bytes**. This is a project setting, not a theoretically optimal value. Updates replace the whole portrait, so the model must preserve existing material unrelated to the update.
+The current write and injection limits are both **5210 UTF-8 bytes**. This is a project setting, not a theoretically optimal value. Updates replace the whole profile, so the model must preserve existing material unrelated to the update.
 
 The prompt asks for inferences to be placed under the `推测特征` label. Code checks the format, size and some wording. It **cannot recognize every inference presented as a fact**, and it does not fully validate the sources of every L1 line.
 
-### L2: conclusions and the course of an event
+### L2: facts and remembered episodes
 
 L2 contains two kinds of record:
 
@@ -50,21 +50,21 @@ L2 contains two kinds of record:
 
 An existing episode can be supplemented using its ID and the revision that was read. The update produces a new current version while retaining earlier versions. It does not make conflicting versions equally current.
 
-L2 has no application-level cap on its total entry count. Automatically supplied cards are limited to **6144 bytes** per DM round. Material outside that selection stays in storage and can be opened when needed.
+L2 has no application-level cap on its total entry count. Automatically supplied L2 cards are limited to **6144 bytes** per DM round. Material outside that selection stays in storage and can be opened when needed.
 
 ### L3: records that can be checked
 
-L3 stores archived messages, one record per line, by appending. It preserves text received and included in the archive; it is not a complete copy of every platform message and media object.
+L3 stores archived messages in an append-only JSONL file, with one record per line. It preserves text that was received and archived; it is not a complete copy of every platform message or media object.
 
 Images are represented by descriptions and source identifiers, not image files embedded in memory. The AI's viewing reports remain in a separate existing ledger and are accessible through a dedicated read-only tool. A report is the model's interpretation at the time, not necessarily a verified fact about the world.
 
-**No total entry cap does not mean infinite capacity.** Files use disk space and searches take time. Retrieval cannot recover material that was never successfully archived.
+**The absence of a total entry cap does not make storage unlimited.** Files use disk space and searches take time. Retrieval cannot recover material that was never successfully archived.
 
 ## 4. How one conversation round uses memory
 
 1. **Archive the sources.** The host archives received messages and records the identifiers relevant to the round, avoiding duplicate appends on retries.
-2. **Prepare the current context.** Read L1, select L2 cards for the topic and include up to 20 recent messages.
-3. **Find details as needed.** If L2 has no relevant match, automatically try L3 and include up to six history excerpts. Even with an L2 match, the model can explicitly inspect sources.
+2. **Prepare the current context.** Read L1, prioritize L2 cards relevant to the current topic and include up to 20 recent messages. If there is no relevant L2 match, the context still includes up to two high-ranked background cards.
+3. **Find details as needed.** If L2 has no relevant match, automatically try L3, include up to six history excerpts and attach up to two relevant viewing-report summaries. Even with an L2 match, the model can explicitly inspect sources.
 4. **Track replies and memory separately.** Sending and memory submission have separate states. If sending succeeded but the memory update failed, the intended recovery is to repair memory rather than send again.
 5. **Update understanding when there is new evidence.** Add facts or supplement episodes when warranted. Submit empty lists when there is nothing worth adding; there is no quota to fill.
 
@@ -80,7 +80,7 @@ These are different questions.
 
 **Retention depth** determines how much detail to keep. More important episodes can retain more context and quotations. Previously retained detail is not automatically deleted just because importance is later reduced.
 
-**Current relevance** determines what to retrieve for this conversation. A major past event may be irrelevant now; an ordinary old fact may be exactly what the current question needs.
+**Current relevance** determines what to retrieve for this conversation. A major past event may be irrelevant now; an ordinary old fact may be exactly what the current question needs. If no relevant match exists, the system supplies up to two high-ranked cards as background without counting them as relevant matches.
 
 A 200-message conversation is not inherently more important than a 20-message one. A clear promise or a corrected misunderstanding may warrant more attention than a long casual exchange.
 
@@ -94,10 +94,10 @@ Code can require a source from the current round, reject repeated updates and ve
 | Record sources | Losing track of which message or report supports an entry | A valid inference merely because a source exists |
 | Check exact quotations | Accepting a quotation absent from its cited source | Freedom from misleading quotation out of context |
 | Preserve correction links and old versions | Losing the history of a changed conclusion | Automatic discovery of every contradiction |
-| Do not reinforce on search | Treating repeated internal recall as new evidence | An end to all repeated misunderstandings |
+| Do not reinforce on search | Treating repeated internal recall as new evidence | The model never repeating a misunderstanding |
 | Merge only selected facts | Dropping other memories to meet a total entry cap | A merged summary retaining every nuance |
 
-Viewing reports and private-message memories have different read interfaces. The viewing-report tool does not read private portraits. Within a DM, however, an episode may cite both a report and a new message. This is a **scoped distinction between sources**, not a ban on all cross-references.
+Viewing reports and private-message memories have different read interfaces. The viewing-report tool does not read contact profiles. Within a DM, however, an episode may cite both a report and a new message. This is a **scoped distinction between sources**, not a ban on all cross-references.
 
 An interrupted write leaves a recovery record for a later write operation. Multiple files do not change at exactly the same instant, so atomic replacement of individual files is not a guarantee against every failure. Recovery also depends on the required files remaining intact and available.
 
@@ -122,7 +122,7 @@ The main limits are:
 
 - **Different wording can hide an old event.** Retrieval uses keywords, Chinese text fragments, topics and aliases, without semantic vector retrieval. It is more flexible than matching an entire sentence exactly, but it does not recognize every paraphrase.
 - **Importance and interpretation can be wrong.** A score and explanation do not establish an understanding of real emotions.
-- **Old records are not automatically turned into episodes.** Existing facts and source records remain available; new episodes develop through subsequent use.
+- **Old records are not automatically turned into episodes.** Existing facts and source records remain available; new episodes are created during later conversations.
 - **There is no general automatic contradiction resolver.** Scheduled background consolidation, unified access to every conversation channel and off-device backup synchronization are also absent.
 - **Reading costs grow with data.** Some searches scan history files. Latency and disk use therefore matter over time.
 
@@ -134,7 +134,7 @@ Start with a specific old event: can the system find the entry, open its sources
 
 For failures, inspect archive, sending and memory-update states separately. A temporary pending state may simply mean a task is running. Look for stalled or repeatedly failing records rather than treating every `pending` value as a fault.
 
-Check archive completeness by message identity and source, not by requiring history rows to equal received-message counts. The archive can also contain outgoing replies and removes duplicates. Imported records with locally generated identifiers should remain distinguishable from platform-issued message IDs; they are not platform receipts.
+Check archive completeness by message identity and source, not by requiring history rows to equal received-message counts. The archive can also contain outgoing replies, and duplicate message identities are omitted. Imported records with locally generated identifiers should remain distinguishable from platform-issued message IDs; they are not platform receipts.
 
 The implementation values below are code facts, not performance measurements. This repository does not yet provide complete experimental material for reproducing long-term retrieval accuracy, error rates or multi-year cost estimates.
 
@@ -144,7 +144,7 @@ Files are separated by contact UID:
 
 ```text
 memory/
-  L1-<uid>.md          core portrait
+  L1-<uid>.md          core profile
   <uid>.state.json     primary record of L2 entries, episode versions and task states
   facts/<uid>.md       generated reading view; do not edit independently
   <uid>.pending.json   interrupted-write recovery record
@@ -154,7 +154,7 @@ memory/
 
 This `<uid>.state.json` is **not** the plugin scheduler's root-level `state.json`. It is the primary record for L2 and task states; L1, source messages and viewing reports have their own storage.
 
-| Parameter | Checked on 2026-10-29 | Meaning |
+| Parameter | Checked on 2026-10-30 | Meaning |
 |---|---|---|
 | L1 limit | 5210 bytes | Current write and injection limit |
 | Automatically supplied L2 cards | ≤6144 bytes, at most 12 cards | Does not cap total stored entries |
