@@ -1,12 +1,12 @@
 # 意志与记忆 · Will & Memory
 
-这里收录两篇独立的文章：一篇讨论自我意识与意志如何形成，另一篇介绍用于 AI 对话的三层记忆设计。**两篇没有前后篇关系，可以按兴趣分别阅读；记忆系统的实现，也不是意识推测的验证。**
+这里收录两篇独立的文章：一篇讨论自我意识与意志如何形成，另一篇介绍用于 AI 对话的三层记忆设计。可以按兴趣分别阅读。
 
 ## 文章目录
 
 | 文章 | 内容 | English |
 |---|---|---|
-| [自我意识如何形成：关于三个条件的推测](docs/zh/意志的诞生-技术分析.md) | 从硬件基础、驱力和经历出发，以人类成长解释推测的依据，再讨论对 AI 的启发与尚未解决的问题 | [How Self-Awareness Develops](docs/en/how-will-emerges.md) |
+| [自我意识如何形成：关于三个条件的推测](docs/zh/意志的诞生-技术分析.md) | 从人类成长理解身体、需求与经历如何参与自我的形成，再讨论意志以及对 AI 的启发 | [How Self-Awareness Develops](docs/en/how-will-emerges.md) |
 | [三层记忆：设计、实现与边界](docs/zh/三层记忆框架.md) | 介绍私人 B 站插件中的记忆设计，包括信息如何保存、检索、更新，以及目前的限制 | [Three-Layer Memory](docs/en/three-layer-memory.md) |
 
 ## 自我意识与意志
@@ -15,7 +15,7 @@
 
 推测的依据来自人类成长：婴儿具有感知与学习的身体基础，生理需求促使其寻求满足、回避不适；随着身体发育和互动经历的积累，儿童逐渐表现出更明确的自我认识。
 
-约1.5–2岁的镜像自我识别是其中一条观察线索，并不意味着所有意识都在这个年龄才出现。文章随后讨论自我意识与意志的区别，以及这一思路对 AI 提出了什么问题。三个条件的作用尚待检验，文章没有声称已经找到意识诞生的充分条件。
+文章沿着这个成长过程，继续讨论人怎样形成自己的目标、作出取舍，以及人工系统能从中借鉴什么。
 
 ## 三层记忆设计
 
@@ -27,24 +27,24 @@
 
 每轮对话只取相关的一部分内容。旧事被再次提起，可以补充已有记忆；仅仅被系统搜索到，不会因此自动变得更重要。
 
-这套设计已经用于作者的私人插件。文档说明当前实现及其限制，不承诺无限存储、永不漏检或复现人脑记忆。
+这套设计已经用于作者的私人插件。文档介绍当前实现，以及存储、检索和更新时需要注意的问题。
 
 ## 作者、资料与版本
 
-这些文章由一名高中生发起，在与 AI 的讨论中逐步整理。DeepSeek 参与原始讨论和记忆系统实现；Codex 协助代码核对与文档修订。AI 参与写作不代替事实核查。
+这些文章由一名高中生发起，在与 AI 的讨论中逐步整理。DeepSeek 参与原始讨论和记忆系统实现；Codex 协助代码核对与文档修订。
 
 文档初稿：**2026-10-28**；本次修订：**2026-10-29**。中文和英文内容同步，旧版保留在 Git 提交历史中。
 
-本仓库只发布说明文档，不包含完整插件源码、私人对话或完整实验材料。记忆文章中的实现细节以注明日期的本地版本为准；引用论文不表示已经复现其结果。两篇文章均未经过同行评审。
+本仓库发布文章，完整插件源码与私人对话未公开。记忆文章中的实现细节以注明日期的本地版本为准，研究资料在各篇文中列出。
 
 ## English
 
-This repository contains two independent essays. Neither is a prerequisite or a sequel to the other, and the memory implementation is not a test of the consciousness hypothesis.
+This repository contains two independent essays. You can read either according to your interests.
 
-- [How Self-Awareness Develops](docs/en/how-will-emerges.md) proposes three conditions: a physical foundation, drives and experience in the world. It explains the reasoning through human development before considering AI and unresolved questions. Mirror self-recognition around 18–24 months is a developmental milestone, not an established onset of all consciousness.
+- [How Self-Awareness Develops](docs/en/how-will-emerges.md) proposes three conditions: a physical foundation, drives and experience in the world. It draws on human development to explore how people come to understand themselves, form goals and make choices, then considers what artificial systems might learn from that process.
 - [Three-Layer Memory](docs/en/three-layer-memory.md) describes a memory design used in a private Bilibili plugin: a small core portrait, retrievable facts and episodes, and archived records. It explains storage, retrieval, updates and practical limits.
 
-The essays were initiated by a high-school student through discussions with AI. DeepSeek contributed to the original discussions and memory implementation; Codex assisted with code checks and document editing. Both languages were revised on **2026-10-29**. This repository contains documentation, not the full plugin, private conversations or complete experimental materials. Neither essay has been peer-reviewed.
+The essays were initiated by a high-school student through discussions with AI. DeepSeek contributed to the original discussions and memory implementation; Codex assisted with code checks and document editing. Both languages were revised on **2026-10-29**. The full plugin and private conversations are not published here. Implementation details refer to the dated local version, and research sources are linked in each essay.
 
 ## License
 
